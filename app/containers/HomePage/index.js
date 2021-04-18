@@ -28,8 +28,9 @@ export default function HomePage() {
  
   <main id="main">
 
-    {/* ======= Clients Section ======= */}
+    {/* ======= Clients Section ======= 
    <Clients />
+   */}
     {/* ======= Portfolio Section ======= */}
    <Portfolio />
     {/* ======= Blogs Section ======= */}

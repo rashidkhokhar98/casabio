@@ -18,7 +18,7 @@ function Hero() {
           <h1>Better Solutions For Your Business</h1>
           <h2>We are team of talented people making websites with latest Tech.</h2>
           <div className="d-lg-flex">
-            <a href="/login" className="btn-get-started scrollto">Login</a>
+            <a href="#portfolio" className="btn-get-started scrollto">Explore</a>
           </div>
         </div>
         <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay={200}>
