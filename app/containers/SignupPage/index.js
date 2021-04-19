@@ -1,6 +1,6 @@
 /**
  *
- * LoginPage
+ * SignupPage
  *
  */
 
@@ -16,12 +16,11 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 const schema = yup.object().shape({
+  name: yup.string().required(),
   email: yup.string().required(),
   password: yup.string().required(),
 });
-
-export function LoginPage() {
-
+export function SignupPage() {
   const { register, handleSubmit, reset, errors } = useForm({
     resolver: yupResolver(schema),
   });
@@ -41,8 +40,22 @@ export function LoginPage() {
           <div className="row justify-content-center mt-5 ">
             <div className="col-10 col-sm-10 col-md-8 col-lg-6 col-xl-6 pb-3 pt-3 border mt-5 mb-5 text-dark rounded " style={{  background: "#C2A835" }}>
               <form onSubmit={handleSubmit(onSubmitt)}>
-             
-
+              <div className="row">
+                  <div className="form-group col">
+                    <label htmlFor="name">Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      className="form-control"
+                      id="name"
+                      placeholder="Enter name"
+                      ref={register}
+                    />
+                    <div style={{ color: 'red' }}>
+                      {errors && errors.name && '* Enter Name '}
+                    </div>
+                  </div>
+                </div>
                 <div className="row">
                   <div className="form-group col">
                     <label htmlFor="email">Email address</label>
@@ -83,11 +96,8 @@ export function LoginPage() {
                 <div className="row ">
                   <div className="col text-center">
                     <button type="submit" className="get-started-btn">
-                      Login
+                      Sign up
                     </button>
-                    <a href="/signup" className="ml-2 text-dark">
-                      signup?
-                    </a>
                   </div>
                 </div>
               </form>
@@ -101,7 +111,7 @@ export function LoginPage() {
   );
 }
 
-LoginPage.propTypes = {
+SignupPage.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
@@ -116,4 +126,4 @@ const withConnect = connect(
   mapDispatchToProps,
 );
 
-export default compose(withConnect)(LoginPage);
+export default compose(withConnect)(SignupPage);

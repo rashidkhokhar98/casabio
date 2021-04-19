@@ -77,7 +77,7 @@ function Contact() {
                         value={toEmail}
                         readOnly
                         style={{
-                          border: '2px solid rgb(79, 235, 227)',
+                          border: '2px solid #5B5426',
                           borderRadius: '5px',
                         }}
                       />
@@ -94,7 +94,7 @@ function Contact() {
                         onChange={e => setFromEmail(e.target.value)}
                         ref={register}
                         style={{
-                          border: '2px solid rgb(79, 235, 227)',
+                          border: '2px solid #5B5426',
                           borderRadius: '5px',
                         }}
                       />
@@ -115,7 +115,7 @@ function Contact() {
                       onChange={e => setText(e.target.value)}
                       ref={register}
                       style={{
-                        border: '2px solid rgb(79, 235, 227)',
+                        border: '2px solid #5B5426',
                         borderRadius: '5px',
                       }}
                     />
